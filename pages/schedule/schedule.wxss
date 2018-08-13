@@ -1,0 +1,138 @@
+/* pages/schedule/schedule.wxss */
+/**index.wxss**/
+.headLine{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.searchIcon{
+    height: 40rpx;
+    width: 40rpx;
+    margin-left: 25rpx;
+    margin-top: 60rpx;
+}
+
+.flex-item {
+    width: 95rpx;
+    height: 100px;
+}
+
+.kcb-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.kcmctext {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: 26rpx;
+    color: #fff;
+    text-overflow: ellipsis;
+    -webkit-line-clamp:3;
+    overflow: hidden;
+    margin-top: 25rpx;
+    text-align: center;
+}
+
+.kcddtext {
+    font-size: 26rpx;
+    color: #fff;
+    margin-top: 15rpx;
+    text-align: center;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    margin-left: 67rpx;
+    height: 75rpx;
+    position: fixed;
+}
+
+.top-text {
+    display: flex;
+    flex-direction: column;
+    width: 97rpx;
+    height: 75rpx;
+    justify-content: center;
+    align-items: center;
+    border-top:  0.5px solid #eeeeee;
+    border-bottom:  0.5px solid #eeeeee;
+}
+
+.scroll {
+    margin-top: 75rpx;
+    z-index: 101;
+    position: fixed;
+    height: 1200rpx;
+}
+
+.left {
+    width: 67rpx;
+    height: 105rpx;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 0.5px solid #eeeeee;
+}
+
+.detail{
+    width:550rpx;
+    position: absolute;
+    z-index: 105;
+    opacity: 0.8;
+    top:300rpx;
+    border-radius: 10rpx;
+    margin-left: 120rpx;
+    background-color: #5f9790;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail1{
+    font-size: 29rpx;
+    color: white;
+    margin-left: 40rpx;
+    width:350rpx;
+}
+
+.detail2{
+    font-size: 35rpx;
+    color: white;
+    margin-left: 40rpx;
+    margin-top: 3rpx;
+}
+
+.edit{
+    height: 8rpx;
+    width: 34rpx;
+    margin-left: 505rpx;
+}
+
+.weekday{
+  font-size: 28rpx;
+  color:black;
+  font-weight:bold;
+  border-radius:8rpx;
+  width:70rpx;
+  text-align: center;
+}
+
+.downIcon{
+    height: 22rpx;
+    width: 22rpx;
+}
+
+.BGI{
+    position:fixed;
+    z-index: 90;
+    width: 750rpx;
+}

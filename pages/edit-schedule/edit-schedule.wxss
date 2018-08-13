@@ -1,0 +1,52 @@
+page{
+    background-color: #f3f3f3;
+}
+
+.headLine{
+    display: flex;
+    flex-direction: row;
+    height: 115rpx;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    border-bottom: 1px solid #f1f1f1;
+}
+.searchIcon{
+    height: 50rpx;
+    width: 50rpx;
+    margin-left: 20rpx;
+    margin-top: 50rpx;
+}
+
+.item{
+    height: 90rpx;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    line-height: 90rpx;
+    margin-top: 1rpx;
+}
+
+.textContainer{
+    margin-left: 50rpx;
+    font-size: 32rpx;
+    width: 125rpx;
+}
+
+.inputContainer{
+    margin-left: 30rpx;
+    height:90rpx;
+}
+
+.buttonContainer{
+    height: 77rpx;
+    width: 170rpx;
+    margin-left: 150rpx;
+    margin-top: 100rpx;
+    background-color: black;
+    color: white;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 77rpx;
+}

@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/schedule/schedule",
+    "pages/my/my",
+    "pages/get-schedule/get-schedule",
+    "pages/insert-schedule/insert-schedule",
+    "pages/edit-schedule/edit-schedule",
+    "pages/schedule-set/schedule-set"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "navigationStyle": "custom"
+  },"tabBar": {
+    "list": [{
+      "pagePath": "pages/schedule/schedule",
+      "text": "课表",
+      "iconPath": "/icon/schedule.png",
+      "selectedIconPath": "/icon/scheduleS.png"
+    },{
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "/icon/my.png",
+      "selectedIconPath": "/icon/myS.png"
+    }]
+  }
+}

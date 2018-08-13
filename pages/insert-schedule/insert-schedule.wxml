@@ -1,0 +1,57 @@
+<view class="headLine" style="height:{{headHeight}}rpx;">
+    <image class="searchIcon" src="/icon/back.png"  style="margin-top: {{backHeight}}rpx;" bindtap="onBack"></image>
+    <view style="margin-top: {{textHeight}}rpx;margin-left: 210rpx;font-size: 33rpx">手动添加课程</view>
+</view>
+<view style="height: {{headHeight}}rpx;"></view>
+<view style="margin-top: 30rpx"></view>
+<view class="item">
+    <view class="textContainer">课程</view>
+    <input class="inputContainer" placeholder="课程名称" confirm-type="next" bindblur="getDetail" id="lesson" />
+</view>
+<view class="item">
+    <view class="textContainer">老师</view>
+    <input class="inputContainer" placeholder="老师姓名" confirm-type="next" bindblur="getDetail" id="teacher" />
+</view>
+<view style="margin-top: 30rpx"></view>
+<view class="item">
+    <view class="textContainer">星期</view>
+    <view class="inputContainer" style="margin-left: 15rpx">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="inputContainer" style="margin-left: 0rpx">
+                周{{array[index]}}
+            </view>
+        </picker>
+    </view>
+</view>
+<view class="item">
+    <view class="textContainer">开始周</view>
+    <view class="inputContainer" style="margin-left: 21rpx">第</view>
+    <input class="inputContainer" style="margin-left: 15rpx;width:50rpx" placeholder="1" confirm-type="next" bindblur="getDetail" type="number" id="startWeek" />
+    <view class="inputContainer" style="margin-left: 0rpx">周</view>
+</view>
+<view class="item">
+    <view class="textContainer">结束周</view>
+    <view class="inputContainer" style="margin-left: 21rpx">第</view>
+    <input class="inputContainer" style="margin-left: 15rpx;width:50rpx" placeholder="2" confirm-type="next" bindblur="getDetail" type="number" id="endWeek" />
+    <view class="inputContainer" style="margin-left: 0rpx">周</view>
+</view>
+<view class="item">
+    <view class="textContainer">节数</view>
+    <view class="inputContainer" style="margin-left: 15rpx">
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class="inputContainer" style="margin-left: 0rpx">
+                第{{multiArray[0][multiIndex[0]]}}-{{multiArray[1][multiIndex[1]]}}节
+            </view>
+        </picker>
+    </view>
+</view>
+<view style="margin-top: 30rpx"></view>
+<view class="item">
+    <view class="textContainer">教学楼</view>
+    <input class="inputContainer" style="margin-left: 21rpx" placeholder="教学楼名称" confirm-type="next" bindblur="getDetail" id="building" />
+</view>
+<view class="item">
+    <view class="textContainer">教室</view>
+    <input class="inputContainer" placeholder="教室编号" confirm-type="next" bindblur="getDetail" id="classroom" />
+</view>
+<view class="buttonContainer" bindtap="insertSchedule">加入</view>

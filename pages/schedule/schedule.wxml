@@ -1,0 +1,45 @@
+<!--pages/schedule/schedule.wxml-->
+<view class="headLine" style="height:{{headHeight}}rpx;">
+    <view style="margin-top: {{textHeight+8}}rpx;margin-left: 32rpx;font-size: 33rpx" bindtap="onSetting">设置</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" style="display: flex;width: 180rpx;margin-left: 215rpx">
+        <view style="margin-top: {{textHeight}}rpx;margin-left: 0rpx;font-size: 40rpx;font-weight:bold;" bindtap="chooseWeek">
+            第 {{array[index]}} 周
+            <image class="downIcon" src="/icon/down.png"></image>
+        </view>
+    </picker>
+</view>
+<view style="height: {{headHeight}}rpx;"></view>
+<view wx:if="{{detailFlag}}" class="detail">
+    <image class="edit" bindtap="onEdit" style="margin-top: {{topIndex}}rpx" src="/icon/edit.png">…</image>
+    <view class="detail1">{{wlist[detailNum].kcmc}}</view>
+    <view class="detail2" style="margin-top: 30rpx;font-size: 29rpx;">{{wlist[detailNum].ls}}</view>
+    <view class="detail2">第{{detailJie}}节  {{wlist[detailNum].qszs}}-{{wlist[detailNum].jszs}}周</view>
+    <view class="detail2">{{wlist[detailNum].kcdd}}</view>
+    <view style="margin-top: 30rpx"></view>
+</view>
+<image class="BGI" style="" src="{{}}"></image>
+<view class="top">
+    <view wx:for="{{weekday}}" class="top-text">
+        <view class="weekday" style="color:{{weekFontColor[index]}};background-color:{{weekColor[index]}}">周{{item[0]}}</view>
+        <view style="font-size: 18rpx;color: #6b6b6b">{{item[1]}}</view>
+    </view>
+</view>
+<scroll-view scroll-y="true" class="scroll" bindtap="closeDetail" style="height:{{scrollHeight}}rpx">
+    <view style="height:{{innerHeight}}rpx;width:730rpx;display:flex;">
+        <view>
+            <view wx:for="{{timeTable}}" class="left">
+                <view style="font-size: 28rpx;color: black;font-weight:bold;">{{item[0]}}</view>
+                <view style="font-size: 18rpx;color: #6b6b6b">{{item[1]}}</view>
+            </view>
+        </view>
+
+
+        <!--课表-->
+        <view wx:for="{{wlist}}">
+            <view wx:if="{{item.show}}" class="flex-item kcb-item" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*98}}rpx;margin-top:{{(item.skjc-1)*105+5}}rpx;height:{{item.skcd*105-5}}rpx;background-color:{{colorArrays[item.showColor][index%6]}};z-index:{{100+item.showColor}}">
+                <view class="kcmctext" style="-webkit-line-clamp:{{item.skcd==1?2:(item.skcd)}}">{{item.kcmc}}</view>
+                <view wx:if="{{item.skcd-1}}" class="kcddtext">{{item.kcddjc}}</view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

@@ -1,0 +1,24 @@
+<view class="headLine" style="height:{{headHeight}}rpx;">
+    <image class="searchIcon" src="/icon/back.png" style="margin-top: {{backHeight}}rpx;" bindtap="onBack"></image>
+    <view style="margin-top: {{textHeight}}rpx;margin-left: 240rpx;font-size: 33rpx">导入课表</view>
+</view>
+<view style="height: {{headHeight}}rpx;"></view>
+<view style="margin-top: 30rpx"></view>
+<view class="item">
+    <view class="textContainer">来源</view>
+    <view class="textContainer" style="width:500rpx">教务管理系统</view>
+</view>
+<view class="item">
+    <view class="textContainer">学期</view>
+    <view class="textContainer" style="width:500rpx">{{schoolTerm}}</view>
+</view>
+<view style="margin-top: 30rpx"></view>
+<view class="item">
+    <view class="textContainer">学号</view>
+    <input class="inputContainer" value="{{lastID}}" placeholder="请输入学号" confirm-type="next" bindblur="getID" />
+</view>
+<view class="item">
+    <view class="textContainer">密码</view>
+    <input class="inputContainer" placeholder="请输入教务系统密码" confirm-type="done" password="true" bindblur="getPW" />
+</view>
+<view class="buttonContainer" bindtap="getSchedule">导入</view>

@@ -1,0 +1,45 @@
+<view>
+  <view class="headLine">
+    <image class="searchIcon" src=""></image>
+    <view style="margin-top: 60rpx;margin-left: 275rpx;font-size: 33rpx">我的</view>
+  </view>
+  <view style="height: 130rpx;"></view>
+  <view wx:if="{{!hasUserInfo && canIUse}}" class="first">
+    <view class="user-section">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="user-button">点击登录</button>
+    </view>
+    <image class="user-avatar" src="/icon/avatar.png"></image>
+  </view>
+
+  <view wx:else class="first">
+    <view class="user-section">
+      <view class="user-name">{{userInfo.nickName}}</view>
+    </view>
+    <image class="user-avatar" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+
+  <view class="extend">
+    <button class="buttonContainer" open-type="share" style="display:flex" url="" bindtap="onShare">
+      <image class="icon" style="height: 48rpx;margin-top: 22rpx;margin-left: 22rpx" src="/icon/7.png"></image>
+      <view class="item" style="line-height: 45rpx">推荐给好友</view>
+    </button>
+  </view>
+
+
+  <view class="third">
+  <navigator style="display:flex">
+    <button class="buttonContainer" open-type='contact' session-from='weapp'>
+        <image class="icon" style="margin-left: 23rpx" src="/icon/5.png"></image>
+        <text style="font-size: 32rpx; color: grey; margin-top:8rpx;margin-left:30rpx">意见反馈</text>
+    </button>
+   </navigator>
+  
+    <view class="lightline"></view>
+    <navigator style="display:flex" bindtap="aboutus">
+      <image class="icon" src="/icon/4.png"></image>
+      <view class="item">关于我们</view>
+    </navigator>
+    
+  </view>
+
+</view>
